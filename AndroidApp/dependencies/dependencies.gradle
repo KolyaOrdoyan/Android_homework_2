@@ -1,0 +1,64 @@
+ext {
+
+    versionOfName = '1.0'
+    versionOfCode = 1
+
+    versionOfCompileSdk = 32
+    versionOfMinSdk = 23
+    versionOfTargetSdk = 32
+    versionOfBuildTools = '30.0.2'
+
+
+    versions = [
+            //retrofit
+            "retrofitVersion"      : '2.9.0',
+            "okhttpVersion"        : '4.9.0',
+            // Koin
+            "koinVersion"          : '2.1.6',
+            "koinAndroidxViewmodel": '2.1.6',
+            // Recyclerview
+            "recyclerviewVersion"  : '1.2.1',
+            //Navigation
+            "navigationVersion"    : '2.5.3',
+            //core-kotlinX
+            "ktxVersion"           : '1.7.0',
+            //appcompat:1.5.1
+            "appcomparVersion"     : '1.5.1',
+            //material:1.7.0'
+            "materialVersion"      : '1.7.0'
+    ]
+
+    materialDependencies = [
+            material: "com.google.android.material:material:${versions.materialVersion}"
+    ]
+
+    ktxDependencies = [
+            appcompar: "androidx.appcompat:appcompat:${versions.appcomparVersion}",
+            ktx      : "androidx.core:core-ktx:${versions.ktxVersion}"
+    ]
+
+    retrofitDependencies = [
+            retrofit             : "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
+            retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:${versions.retrofitVersion}",
+            retrofitRxJavaAdapter: "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofitVersion}",
+            okHttp3              : "com.squareup.okhttp3:okhttp:${versions.okhttpVersion}",
+            okHttp3Logging       : "com.squareup.okhttp3:logging-interceptor:${versions.okhttpVersion}"
+    ]
+
+    koinDependencies = [
+            koinCore             : "io.insert-koin:koin-android:${versions.koinVersion}",
+            koinAndroidxViewmodel: "io.insert-koin:koin-androidx-viewmodel:${versions.koinAndroidxViewmodel}",
+//            koinScope            : "org.koin:koin-android-scope:${versions.koinVersion}"
+    ]
+
+    recyclerviewDependencies = [
+            recyclerview: "androidx.recyclerview:recyclerview:${versions.recyclerviewVersion}",
+    ]
+
+    navigationDependencies = [
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:${versions.navigationVersion}",
+            navigationUi      : "androidx.navigation:navigation-ui-ktx:${versions.navigationVersion}",
+            navigationCommon  : "androidx.navigation:navigation-common-ktx:${versions.navigationVersion}",
+
+    ]
+}
